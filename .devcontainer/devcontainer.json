@@ -2,7 +2,7 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"onCreateCommand": "sudo sed -i '2a unset SSH_CONNECTION SSH_CLIENT SSH_TTY' /usr/local/gitpod/openssh/sshdwrapper.sh",
+	"onCreateCommand": "sudo sed -i '2a unset SSH_CONNECTION SSH_CLIENT SSH_TTY\\nexport DISPLAY=:0' /usr/local/gitpod/openssh/sshdwrapper.sh",
 	"customizations": {
 		"jetbrains": {
 			"plugins": [
